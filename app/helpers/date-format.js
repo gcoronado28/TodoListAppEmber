@@ -2,7 +2,7 @@ import { helper } from '@ember/component/helper';
 
 export default helper(function dateFormat(params/*, hash*/) {
   var date = new Date(params[0]);
-  var day = date.getDate().toString();
+	var day = date.getDate().toString();
   var dayName = date.getDay();
   var month = date.getMonth();
   var year = date.getFullYear().toString();
@@ -10,7 +10,7 @@ export default helper(function dateFormat(params/*, hash*/) {
 });
 
 function DayName(x) {
-  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
   return days[x];
 }
 

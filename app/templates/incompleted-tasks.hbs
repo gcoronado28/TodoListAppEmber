@@ -1,1 +1,34 @@
-<h1>Incompleted tasks</h1>
+<section id="tasks-table">
+  <div class="container-fluid">
+    <div id="btn-div">
+      <a href="new.html" class="add-task">Add task</a>
+    </div>
+    <div id="table-div">
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Task</th>
+            <th>Complete By</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          {{#each tasks as |task|}}
+            <tr>
+              <th scope="row"><i class="far fa-check-circle"></i></th>
+              <td><span class="task-name">{{task.name}}</span></td>
+              <td>{{date-format task.date}}</td>
+              <td>
+                <div class="actions-wrapper">
+                  <a href="edit.html"><i class="fas fa-pencil-alt"></i></a>
+                  <i class="ml-4 fas fa-trash-alt" data-toggle="modal" data-target="#exampleModal"></i>
+                </div>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
