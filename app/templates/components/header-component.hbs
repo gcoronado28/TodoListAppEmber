@@ -10,8 +10,12 @@
       </div>
     </div>
     <div id="nav-right">
-      <a href="index.html" class="active">Incomplete Tasks</a>
-      <a href="completed_tasks.html">Completed Tasks</a>
+      {{#link-to "incompleted-tasks"}}
+        Incomplete Tasks
+      {{/link-to}}
+      {{#link-to "completed-tasks"}}
+        Completed Tasks
+      {{/link-to}}
     </div>
   </nav>
 </header>

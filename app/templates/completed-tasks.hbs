@@ -16,7 +16,7 @@
         <tbody id="table-body">
           {{#each tasks as |task|}}
             <tr>
-              <th scope="row"><i class="far fa-check-circle"></i></th>
+              <th scope="row"><i class="far fa-times-circle"></i></th>
               <td><span class="task-name" {{action "showTaskPreview" task}}>{{task.name}}</span></td>
               <td>{{date-format task.date}}</td>
               <td>

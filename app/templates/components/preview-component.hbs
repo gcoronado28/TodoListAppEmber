@@ -1,0 +1,17 @@
+<section id="task-details">
+  <div class="container-fluid">
+    {{#if task}}
+    <div id="footer-head">
+        <h4>{{task.name}}</h4>
+        {{#if task.completed}}
+          <span>Was completed on {{date-format task.date}}</span>
+        {{else}}
+          <span>Needs to be completed by {{date-format task.date}}</span>
+        {{/if}}
+      </div>
+      <p>{{task.description}}</p>
+    {{else}}
+      <p class="text-preview">Select a task to preview it</p>
+    {{/if}}
+    </div>
+</section>
